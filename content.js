@@ -1,10 +1,25 @@
+const channel = new BroadcastChannel('my_bus');
+
+channel.onmessage = function(e) {
+    console.log('Received', e.data);
+};
+
+
 const blockedHostnames = ["x.com", "instagram.com", "youtube.com", "linkedin.com", ]
 
-const isBlocked = !!blockedHostnames.find(host => {
+const isUrlBlocked = !!blockedHostnames.find(host => {
     return window.location.hostname.includes(host)
 })
 
-if (isBlocked) {
-    console.log("tried to bloc")
-  document.innerText = "This website is blocked";
+
+if (isUrlBlocked) { 
+
+    
+
+    if (isFromCallback) {
+        window.localStorage.removeItem(`@r-u-sure#${window.location.hostname}`)
+    } else {
+        window.location.href = `https://gabrieldocoutos.github.io/r-u-sure-website/?callback=${window.location.href}`
+    }
+    
 }
