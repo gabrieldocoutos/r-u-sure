@@ -3,16 +3,12 @@
   "name": "Hello Extensions",
   "description": "Base Level Extension",
   "version": "1.0",
-  "permissions": ["storage","activeTab","scripting", "tabs"],
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
   "content_scripts": [
     {
-        "all_frames": true,
-        "matches": [
-            "<all_urls>"
-        ],
-        "js": [
-            "content.js"
-        ]
+      "all_frames": true,
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
-]
+  ]
 }
