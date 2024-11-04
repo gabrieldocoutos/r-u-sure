@@ -1,7 +1,7 @@
 const channel = new BroadcastChannel('my_bus');
 
 channel.onmessage = function(e) {
-    console.log('Received', e.data);
+    console.log('Received', e);
 };
 
 
@@ -12,14 +12,7 @@ const isUrlBlocked = !!blockedHostnames.find(host => {
 })
 
 
-if (isUrlBlocked) { 
-
+// if (isUrlBlocked) {     
+//         // window.location.href = `https://gabrieldocoutos.github.io/r-u-sure-website/?callback=${window.location.href}`
     
-
-    if (isFromCallback) {
-        window.localStorage.removeItem(`@r-u-sure#${window.location.hostname}`)
-    } else {
-        window.location.href = `https://gabrieldocoutos.github.io/r-u-sure-website/?callback=${window.location.href}`
-    }
-    
-}
+// }
