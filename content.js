@@ -1,7 +1,8 @@
+// TODO: this shouod be done dinamically
 const blockedHostnames = [
   "x.com",
   "instagram.com",
-  "youtube.com",
+//   "youtube.com", // TODO: youtube still not working perfectly 
   "linkedin.com",
 ];
 
